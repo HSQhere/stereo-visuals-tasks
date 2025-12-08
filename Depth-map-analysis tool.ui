@@ -1,0 +1,1050 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>立体视觉深度分析工具</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="mainLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>2</number>
+      </property>
+      <widget class="QWidget" name="tab_BM">
+       <attribute name="title">
+        <string>BM算法</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_BM_Tab">
+        <item>
+         <widget class="QGroupBox" name="groupBox_BM_Params">
+          <property name="title">
+           <string>BM参数设置</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_BM">
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_BM_disp12MaxDiff">
+             <property name="text">
+              <string>视差差异:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_BM_numDisparities">
+             <property name="text">
+              <string>视差范围:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_BM_uniquenessRatio">
+             <property name="text">
+              <string>唯一性比率:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QSpinBox" name="spinBox_BM_speckleRange">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>32</number>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0" colspan="2">
+            <widget class="QPushButton" name="pushButton_BM_Generate">
+             <property name="text">
+              <string>生成BM深度图</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QComboBox" name="comboBox_BM_DepthType">
+             <item>
+              <property name="text">
+               <string>相对深度</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>绝对深度（手动）</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>绝对深度（标定）</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinBox_BM_numDisparities">
+             <property name="minimum">
+              <number>16</number>
+             </property>
+             <property name="maximum">
+              <number>256</number>
+             </property>
+             <property name="singleStep">
+              <number>16</number>
+             </property>
+             <property name="value">
+              <number>96</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QSpinBox" name="spinBox_BM_preFilterSize">
+             <property name="minimum">
+              <number>5</number>
+             </property>
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="value">
+              <number>9</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_BM_speckleWindowSize">
+             <property name="text">
+              <string>斑点窗口:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_BM_blockSize">
+             <property name="text">
+              <string>块大小:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="spinBox_BM_speckleWindowSize">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>1000</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="spinBox_BM_disp12MaxDiff">
+             <property name="minimum">
+              <number>-1</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QLabel" name="label_BM_DepthType">
+             <property name="text">
+              <string>深度计算:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_BM_preFilterSize">
+             <property name="text">
+              <string>预处理大小:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QSpinBox" name="spinBox_BM_blockSize">
+             <property name="minimum">
+              <number>5</number>
+             </property>
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>2</number>
+             </property>
+             <property name="value">
+              <number>11</number>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="2" colspan="2">
+            <widget class="QPushButton" name="pushButton_BM_Save">
+             <property name="text">
+              <string>保存</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_BM_textureThreshold">
+             <property name="text">
+              <string>纹理阈值:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_BM_textureThreshold">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_BM_preFilterCap">
+             <property name="text">
+              <string>预处理截断:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QSpinBox" name="spinBox_BM_uniquenessRatio">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_BM_speckleRange">
+             <property name="text">
+              <string>斑点范围:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QSpinBox" name="spinBox_BM_preFilterCap">
+             <property name="minimum">
+              <number>1</number>
+             </property>
+             <property name="maximum">
+              <number>63</number>
+             </property>
+             <property name="value">
+              <number>31</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_BM_Result">
+          <property name="title">
+           <string>BM深度图结果</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_BM_Result">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_BM_Info">
+             <item>
+              <widget class="QLabel" name="label_BM_Time">
+               <property name="text">
+                <string>计算时间: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_BM_DepthInfo">
+               <property name="text">
+                <string>深度类型: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_BM_ImageInfo">
+               <property name="text">
+                <string>图像尺寸: --</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QGraphicsView" name="graphicsView_BM">
+             <property name="minimumSize">
+              <size>
+               <width>400</width>
+               <height>300</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_SGBM">
+       <attribute name="title">
+        <string>SGBM算法</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_SGBM_Tab">
+        <item>
+         <widget class="QGroupBox" name="groupBox_SGBM_Params">
+          <property name="title">
+           <string>SGBM参数设置</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_SGBM">
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_SGBM_speckleWindowSize">
+             <property name="text">
+              <string>斑点窗口:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QSpinBox" name="spinBox_SGBM_P2">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100000</number>
+             </property>
+             <property name="value">
+              <number>4704</number>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_SGBM_preFilterCap">
+             <property name="text">
+              <string>预处理截断:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_SGBM_uniquenessRatio">
+             <property name="text">
+              <string>唯一性比率:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QLabel" name="label_SGBM_disp12MaxDiff">
+             <property name="text">
+              <string>视差差异:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QSpinBox" name="spinBox_SGBM_speckleWindowSize">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>1000</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_SGBM_blockSize">
+             <property name="text">
+              <string>块大小:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QSpinBox" name="spinBox_SGBM_disp12MaxDiff">
+             <property name="minimum">
+              <number>-1</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>1</number>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QSpinBox" name="spinBox_SGBM_uniquenessRatio">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>10</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0" colspan="2">
+            <widget class="QPushButton" name="pushButton_SGBM_Generate">
+             <property name="text">
+              <string>生成SGBM深度图</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_SGBM_numDisparities">
+             <property name="text">
+              <string>视差范围:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QSpinBox" name="spinBox_SGBM_preFilterCap">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>63</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_SGBM_P2">
+             <property name="text">
+              <string>P2参数:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinBox_SGBM_minDisparity">
+             <property name="minimum">
+              <number>-100</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>0</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_SGBM_P1">
+             <property name="text">
+              <string>P1参数:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_SGBM_minDisparity">
+             <property name="text">
+              <string>最小视差:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QSpinBox" name="spinBox_SGBM_P1">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>10000</number>
+             </property>
+             <property name="value">
+              <number>1176</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QSpinBox" name="spinBox_SGBM_numDisparities">
+             <property name="minimum">
+              <number>16</number>
+             </property>
+             <property name="maximum">
+              <number>256</number>
+             </property>
+             <property name="singleStep">
+              <number>16</number>
+             </property>
+             <property name="value">
+              <number>96</number>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_SGBM_blockSize">
+             <property name="minimum">
+              <number>3</number>
+             </property>
+             <property name="maximum">
+              <number>11</number>
+             </property>
+             <property name="value">
+              <number>7</number>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="2" colspan="2">
+            <widget class="QPushButton" name="pushButton_SGBM_Save">
+             <property name="text">
+              <string>保存</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="2">
+            <widget class="QLabel" name="label_SGBM_speckleRange">
+             <property name="text">
+              <string>斑点范围:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="3">
+            <widget class="QSpinBox" name="spinBox_SGBM_speckleRange">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>32</number>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="3">
+            <widget class="QComboBox" name="comboBox_SGBM_mode">
+             <item>
+              <property name="text">
+               <string>SGBM</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>SGBM 3WAY</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>HH</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="6" column="2">
+            <widget class="QLabel" name="label_SGBM_mode">
+             <property name="text">
+              <string>算法模式:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="2">
+            <widget class="QLabel" name="label_SGBM_DepthType">
+             <property name="text">
+              <string>深度计算:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="3">
+            <widget class="QComboBox" name="comboBox_SGBM_DepthType">
+             <item>
+              <property name="text">
+               <string>相对深度</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>绝对深度（手动）</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>绝对深度（标定）</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_SGBM_Result">
+          <property name="title">
+           <string>SGBM深度图结果</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayout_SGBM_Result">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_SGBM_Info">
+             <item>
+              <widget class="QLabel" name="label_SGBM_Time">
+               <property name="text">
+                <string>计算时间: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_SGBM_DepthInfo">
+               <property name="text">
+                <string>深度类型: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_SGBM_ImageInfo">
+               <property name="text">
+                <string>图像尺寸: --</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QGraphicsView" name="graphicsView_SGBM">
+             <property name="minimumSize">
+              <size>
+               <width>400</width>
+               <height>300</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_Compare">
+       <attribute name="title">
+        <string>两者对比</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="tabCompare_Layout">
+        <item>
+         <widget class="QGroupBox" name="groupBox_Compare_Params">
+          <property name="title">
+           <string>统一参数设置</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout_Compare">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_Compare_uniquenessRatio">
+             <property name="text">
+              <string>唯一性比率:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_Compare_numDisparities">
+             <property name="text">
+              <string>视差范围:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QSpinBox" name="spinBox_Compare_numDisparities">
+             <property name="minimum">
+              <number>16</number>
+             </property>
+             <property name="maximum">
+              <number>256</number>
+             </property>
+             <property name="singleStep">
+              <number>16</number>
+             </property>
+             <property name="value">
+              <number>96</number>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QSpinBox" name="spinBox_Compare_blockSize">
+             <property name="minimum">
+              <number>5</number>
+             </property>
+             <property name="maximum">
+              <number>255</number>
+             </property>
+             <property name="singleStep">
+              <number>2</number>
+             </property>
+             <property name="value">
+              <number>11</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_Compare_DepthType">
+             <property name="text">
+              <string>深度计算:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="2">
+            <widget class="QLabel" name="label_Compare_speckleWindowSize">
+             <property name="text">
+              <string>斑点窗口:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QSpinBox" name="spinBox_Compare_uniquenessRatio">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>100</number>
+             </property>
+             <property name="value">
+              <number>15</number>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QComboBox" name="comboBox_Compare_DepthType">
+             <item>
+              <property name="text">
+               <string>相对深度</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>绝对深度（手动）</string>
+              </property>
+             </item>
+             <item>
+              <property name="text">
+               <string>绝对深度（标定）</string>
+              </property>
+             </item>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_Compare_blockSize">
+             <property name="text">
+              <string>块大小:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0" colspan="4">
+            <widget class="QPushButton" name="pushButton_Compare_Generate">
+             <property name="text">
+              <string>对比生成</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="3">
+            <widget class="QSpinBox" name="spinBox_Compare_speckleWindowSize">
+             <property name="minimum">
+              <number>0</number>
+             </property>
+             <property name="maximum">
+              <number>1000</number>
+             </property>
+             <property name="value">
+              <number>100</number>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <layout class="QHBoxLayout" name="horizontalLayout_Compare">
+          <item>
+           <widget class="QGroupBox" name="groupBox_Compare_BM">
+            <property name="title">
+             <string>BM结果</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_Compare_BM">
+             <item>
+              <widget class="QLabel" name="label_Compare_BM_Time">
+               <property name="text">
+                <string>计算时间: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_Compare_BM_Info">
+               <property name="text">
+                <string>深度类型: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGraphicsView" name="graphicsView_Compare_BM">
+               <property name="mouseTracking">
+                <bool>false</bool>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_Compare_SGBM">
+            <property name="title">
+             <string>SGBM结果</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_Compare_SGBM">
+             <item>
+              <widget class="QLabel" name="label_Compare_SGBM_Time">
+               <property name="text">
+                <string>计算时间: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label_Compare_SGBM_Info">
+               <property name="text">
+                <string>深度类型: --</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QGraphicsView" name="graphicsView_Compare_SGBM"/>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_Compare_Stats">
+            <property name="title">
+             <string>统计对比</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayout_Compare_Stats">
+             <item>
+              <widget class="QLabel" name="label_Compare_Stats">
+               <property name="text">
+                <string>性能对比:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QTextEdit" name="textEdit_Compare_Stats">
+               <property name="readOnly">
+                <bool>true</bool>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButton_Compare_SaveAll">
+               <property name="text">
+                <string>保存所有结果</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+    <item>
+     <layout class="QVBoxLayout" name="verticalLayout_Sidebar">
+      <item>
+       <widget class="QGroupBox" name="groupBox_ImageInput">
+        <property name="title">
+         <string>图像输入</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_Input">
+         <item>
+          <widget class="QLabel" name="label_LeftImage">
+           <property name="text">
+            <string>左图像:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_LeftImage">
+           <property name="placeholderText">
+            <string>左图像路径</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_LoadLeft">
+           <property name="text">
+            <string>浏览...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_RightImage">
+           <property name="text">
+            <string>右图像:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_RightImage">
+           <property name="placeholderText">
+            <string>右图像路径</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_LoadRight">
+           <property name="text">
+            <string>浏览...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_CalibFile">
+           <property name="text">
+            <string>标定文件:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="lineEdit_CalibFile">
+           <property name="placeholderText">
+            <string>标定文件路径(可选)</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_LoadCalib">
+           <property name="text">
+            <string>浏览...</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_Calibration">
+        <property name="title">
+         <string>标定参数</string>
+        </property>
+        <layout class="QGridLayout" name="gridLayout_Calib">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_FocalLength">
+           <property name="text">
+            <string>焦距:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_FocalLength">
+           <property name="minimum">
+            <double>100.000000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10000.000000000000000</double>
+           </property>
+           <property name="value">
+            <double>1000.000000000000000</double>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="label_Baseline">
+           <property name="text">
+            <string>基线:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QDoubleSpinBox" name="doubleSpinBox_Baseline">
+           <property name="minimum">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="maximum">
+            <double>10.000000000000000</double>
+           </property>
+           <property name="singleStep">
+            <double>0.010000000000000</double>
+           </property>
+           <property name="value">
+            <double>0.540000000000000</double>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox_Preview">
+        <property name="title">
+         <string>图像预览</string>
+        </property>
+        <layout class="QVBoxLayout" name="verticalLayout_Preview">
+         <item>
+          <widget class="QLabel" name="label_Preview">
+           <property name="minimumSize">
+            <size>
+             <width>180</width>
+             <height>120</height>
+            </size>
+           </property>
+           <property name="frameShape">
+            <enum>QFrame::Shape::Box</enum>
+           </property>
+           <property name="text">
+            <string>无图像</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignmentFlag::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_Preview">
+           <item>
+            <widget class="QPushButton" name="pushButton_ShowLeft">
+             <property name="text">
+              <string>左图</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_ShowRight">
+             <property name="text">
+              <string>右图</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
