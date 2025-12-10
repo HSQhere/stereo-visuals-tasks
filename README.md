@@ -226,6 +226,7 @@ Use this table to determine appropriate P1/P2 values:
 1. **Middlebury Calibration**: Some Middlebury datasets may require manual parameter adjustment due to different calibration formats / Middlebury标定：某些Middlebury数据集可能需要手动调整参数，因为标定格式不同
 2. **P1/P2 Visualization**: The calculation process for P1/P2 parameters is not currently visualized in the interface / P1/P2可视化：P1/P2参数的计算过程目前未在界面中可视化
 3. **Language Switching**: English interface support is basic and may not cover all elements / 语言切换：英语界面支持基础，可能未覆盖所有元素
+4.**error**: num_disparities Only multiples of 16 can be filled in; otherwise, an error will be reported./视差范围只能填16的倍数，不然报错
 
 ## Future Updates / 未来更新计划
 - Add P1/P2 parameter calculation visualization / 添加P1/P2参数计算可视化
