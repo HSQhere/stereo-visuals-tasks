@@ -8,7 +8,7 @@ week 2
 This is a stereo vision depth estimation tool based on OpenCV and PySide6, supporting both BM and SGBM stereo matching algorithms for binocular image depth map generation and analysis.
 这是一个基于OpenCV和PySide6的立体视觉深度估计工具，支持BM和SGBM两种立体匹配算法，可用于双目图像深度图生成与分析。
 
-## Version: v1.1.0 (2024-01-25) / 版本: v1.1.0 (2024年1月25日)
+
 ### What's New / 更新内容:
 - Optimized relative depth algorithm using percentage calculation / 优化相对深度算法，采用百分比计算
 - Added English interface support / 添加英语界面支持
@@ -236,14 +236,14 @@ Use this table to determine appropriate P1/P2 values:
 
 ## Changelog / 更新日志
 
-### v1.1.0 (2024-01-25)
+### v1.1.0 
 - Optimized relative depth algorithm using percentage calculation / 优化相对深度算法，采用百分比计算
 - Added English interface support / 添加英语界面支持
 - Enhanced calibration file support / 增强标定文件支持
 - Fixed calibration parameter loading issues / 修复标定参数加载问题
 - Improved parameter adjustment interface / 改进参数调整界面
 
-### v1.0.0 (2024-01-15)
+### v1.0.0 
 - Initial version release / 初始版本发布
 - Support for BM and SGBM algorithms / 支持BM和SGBM算法
 - Graphical parameter adjustment interface / 图形化参数调节界面
