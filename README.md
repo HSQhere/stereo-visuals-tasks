@@ -235,7 +235,10 @@ Use this table to determine appropriate P1/P2 values:
 - Implement batch processing functionality / 实现批处理功能
 
 ## Changelog / 更新日志
-
+### v1.2.0 
+-加强sgbm 的识别
+-可以完全适配两个数据集
+-BM 算法仍然不行
 ### v1.1.0 
 - Optimized relative depth algorithm using percentage calculation / 优化相对深度算法，采用百分比计算
 - Added English interface support / 添加英语界面支持
